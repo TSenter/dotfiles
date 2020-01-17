@@ -1,0 +1,8 @@
+# Git aliases
+alias ga="git add"
+alias gc="git commit"
+alias gs="git status --untracked-files=no"
+
+alias gsync="git pull && git push"
+alias gpull="git pull"
+alias gpush="git push"
