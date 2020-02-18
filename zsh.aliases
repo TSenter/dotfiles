@@ -1,8 +1,23 @@
 # Git aliases
 alias ga="git add"
 alias gc="git commit"
+alias gd="git diff --color"
+alias gp="git push"
 alias gs="git status --untracked-files=no"
+alias gunstage="git reset HEAD"
+
+# Git compound commands
+alias gup="git pull --rebase && git remote update origin --prune"
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative"
+
+# Create a new branch and push to GH
+gnew() {
+  local branchName=$1
+  git checkout -b $branchName
+  git push --set-upstream origin $branchName
+}
 
 alias gsync="git pull && git push"
-alias gpull="git pull"
-alias gpush="git push"
+
+# Shortcuts
+alias ca="clear;clear"
