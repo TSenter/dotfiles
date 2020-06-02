@@ -3,6 +3,7 @@ alias ca="clear;clear"
 alias ls="ls --color=auto"
 alias ll="ls -lh"
 alias la="ls -la"
+alias open="xdg-open"
 
 # Git shorthand
 alias ga="git add"

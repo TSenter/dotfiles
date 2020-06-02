@@ -5,6 +5,7 @@ alias gd="git diff --color"
 alias gp="git push"
 alias gs="git status --untracked-files=no"
 alias gunstage="git reset HEAD"
+alias open="xdg-open"
 
 # Git compound commands
 alias gup="git pull --rebase && git remote update origin --prune"
