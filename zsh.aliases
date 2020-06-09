@@ -20,5 +20,12 @@ gnew() {
 
 alias gsync="git pull && git push"
 
+# Create a directory and navigate to it
+mkcd() {
+  local dir=$1
+  mkdir -p $dir
+  cd $dir
+}
+
 # Shortcuts
 alias ca="clear;clear"
