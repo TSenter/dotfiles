@@ -13,7 +13,11 @@ alias gcan="git commit --amend --no-edit"
 alias go="git checkout"
 alias gp="git push"
 alias grb="git rebase -i"
+alias grbc="git rebase --continue"
+alias grba="git rebase --abort"
 alias gs="git status --untracked-files=no"
+alias gst="git stash"
+alias gsp="git stash pop"
 
 # Git compound commands
 alias gup="git pull --rebase && git remote update origin --prune"
