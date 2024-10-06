@@ -1,11 +1,24 @@
+# zsh aliases
+alias ca="clear;clear"
+alias ls="ls --color=auto"
+alias ll="ls -lh"
+alias la="ls -la"
+alias open="xdg-open"
+
 # Git aliases
 alias ga="git add"
+alias gb="git branch"
 alias gc="git commit"
-alias gd="git diff --color"
+alias gcan="git commit --amend --no-edit"
+alias go="git checkout"
 alias gp="git push"
+alias grb="git rebase -i"
+alias grbc="git rebase --continue"
+alias grba="git rebase --abort"
 alias gs="git status --untracked-files=no"
 alias gunstage="git reset HEAD"
-alias open="xdg-open"
+alias gst="git stash -u"
+alias gsp="git stash pop"
 
 # Git compound commands
 alias gup="git pull --rebase && git remote update origin --prune"
@@ -18,14 +31,9 @@ gnew() {
   git push --set-upstream origin $branchName
 }
 
-alias gsync="git pull && git push"
-
 # Create a directory and navigate to it
 mkcd() {
   local dir=$1
   mkdir -p $dir
   cd $dir
 }
-
-# Shortcuts
-alias ca="clear;clear"
