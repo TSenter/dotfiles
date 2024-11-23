@@ -38,3 +38,6 @@ mkcd() {
   mkdir -p $dir
   cd $dir
 }
+
+# Node aliases
+alias pi="pnpm install"
