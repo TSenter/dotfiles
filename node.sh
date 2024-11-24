@@ -82,3 +82,6 @@ clean() {
 if command -v complete; then
  complete -W "--include-lock --skip-install" clean
 fi
+
+# Node aliases
+alias pi="pnpm install"

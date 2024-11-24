@@ -1,10 +1,3 @@
-# zsh aliases
-alias ca="clear;clear"
-alias ls="ls --color=auto"
-alias ll="ls -lh"
-alias la="ls -la"
-alias open="xdg-open"
-
 # Git aliases
 alias ga="git add"
 alias gaa="git add ."
@@ -31,13 +24,3 @@ gnew() {
   git checkout -b $branchName
   git push --set-upstream origin $branchName
 }
-
-# Create a directory and navigate to it
-mkcd() {
-  local dir=$1
-  mkdir -p $dir
-  cd $dir
-}
-
-# Node aliases
-alias pi="pnpm install"
