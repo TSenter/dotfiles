@@ -79,7 +79,7 @@ clean() {
   fi
 }
 
-if command -v complete; then
+if command -v complete 2>&1 >/dev/null; then
  complete -W "--include-lock --skip-install" clean
 fi
 
