@@ -24,3 +24,14 @@ gnew() {
   git checkout -b $branchName
   git push --set-upstream origin $branchName
 }
+
+alias gsave="git add . && git commit -m 'WIP chore: Auto-save' && git push"
+
+gresume() {
+  # Check if last command has message "WIP chore: Auto-save"
+  if [[ $(git log -1 --pretty=%B) == "WIP chore: Auto-save" ]]; then
+    git reset --soft HEAD~1
+  else
+    echo "Last commit is not an auto-save commit"
+  fi
+}
