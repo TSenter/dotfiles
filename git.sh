@@ -15,7 +15,7 @@ alias gst="git stash -u"
 alias gsp="git stash pop"
 
 # Git compound commands
-alias gup="git pull --rebase && git remote update origin --prune"
+alias gup=$'git pull --rebase && git remote update origin --prune && git fetch -p -t -P && for branch in $(git for-each-ref --format \'%(refname) %(upstream:track)\' refs/heads | awk \'$2 == "[gone]" {sub("refs/heads/", "", $1); print $1}\'); do git branch -D $branch; done'
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative"
 
 # Create a new branch and push to GH
